@@ -12,15 +12,17 @@
 <style>
   :root{
     --ink:#20301F; --ink-soft:#3E5240; --moss:#3F6B4F; --moss-deep:#2C4E37;
-    --gold:#B98F1F; --paper:#F1EEDF; --paper-raised:#FBFAF3; --line:#D9D3BC;
+    --gold:#B98F1F; --paper:#E8F1F6; --paper-raised:#F4F9FB; --line:#C6DCE6;
+    --accent:#1F5C7A; --accent-deep:#163F54;
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:'Lato',sans-serif;}
   header{padding:1.25rem 1.5rem 1.25rem;border-bottom:1px solid var(--line);}
   header p.tag{margin:0 0 1rem;color:var(--ink-soft);max-width:640px;font-size:.97rem;line-height:1.5;}
-  .cta{display:inline-block;margin-top:.4rem;background:var(--moss);color:#fff;font-weight:700;font-size:.9rem;
+  .cta{display:inline-block;margin-top:.4rem;background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;
     padding:.6rem 1.1rem;border-radius:6px;text-decoration:none;}
-  .cta:hover{background:var(--moss-deep);}
+  .cta:hover{background:var(--accent-deep);}
+  .note{margin:.5rem 0 0;font-size:.8rem;color:var(--ink-soft);}
   .panel{padding:1rem 1.5rem;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.6rem;align-items:flex-start;background:var(--paper-raised);}
   .panel-label{width:100%;font-size:.78rem;color:var(--ink-soft);margin-bottom:.1rem;}
   select{font-family:'Lato',sans-serif;font-size:.85rem;padding:.4rem .55rem;border-radius:5px;border:1px solid var(--line);background:var(--paper);color:var(--ink);}
@@ -44,7 +46,8 @@
 
 <header>
   <p class="tag">Schools, universities and partner programmes around the world using the Regenerative Economics for Secondary Schools materials. New entries are added as teachers get in touch.</p>
-  <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSf1cFdDMXTUlJf6Emmxp0jHdMabuLbQynwtD8AemR0iEMrCTg/viewform?usp=header" target="_blank" rel="noopener">Add your school to the map</a>
+  <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSf1cFdDMXTUlJf6Emmxp0jHdMabuLbQynwtD8AemR0iEMrCTg/viewform?usp=header" target="_blank" rel="noopener">Add information to the map</a>
+  <p class="note">Submitted information won't appear immediately — it's reviewed before being added to the map.</p>
 </header>
 
 <div class="panel">
@@ -67,6 +70,7 @@
 
 <footer>
   This map is view-only; new entries are reviewed before appearing. Part of <a href="https://regenerativeeconomics.earth" target="_blank" rel="noopener">Regenerative Economics for Secondary Schools</a>.
+  <br>To request a change or removal, contact <a href="mailto:jennifer@regenerativeeconomics.earth">jennifer@regenerativeeconomics.earth</a>.
 </footer>
 
 <script>

@@ -162,6 +162,7 @@ function render(){
         const r = REGIONS[s.country].find(rr=>rr.n.toLowerCase()===s.region.toLowerCase());
         if(r){ lat=r.lat; lng=r.lng; }
       }
+      if(typeof s.lat === 'number' && typeof s.lng === 'number'){ lat=s.lat; lng=s.lng; }
       const [jlat,jlng] = jitter(lat,lng, idx, group.length);
       const marker = L.circleMarker([jlat,jlng], {
         radius:7, color:'#2C4E37', weight:1.5, fillColor:'#3F6B4F', fillOpacity:0.85

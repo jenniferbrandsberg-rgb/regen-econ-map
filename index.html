@@ -187,9 +187,9 @@ const SCHOOLS = [
   {
     "name": "The Educators' Lab",
     "country": "CH",
-    "detail": "Geneva",
-    "lat": 46.2044,
-    "lng": 6.1432,
+    "detail": "Commugny",
+    "lat": 46.3547,
+    "lng": 6.1611,
     "scope": [
       "Unstructured or ongoing"
     ],
@@ -213,9 +213,9 @@ const SCHOOLS = [
   {
     "name": "The Earth Foundation",
     "country": "CH",
-    "detail": "Geneva",
-    "lat": 46.2044,
-    "lng": 6.1432,
+    "detail": "Boulevard du Théâtre 5, Genève",
+    "lat": 46.2005,
+    "lng": 6.1489,
     "scope": [
       "Unstructured or ongoing"
     ],
@@ -284,22 +284,28 @@ function render(){
   markers = [];
   const filtered = SCHOOLS.filter(passesFilters);
 
+  // Resolve each school's true coordinates first (city override > region > country)
+  const resolved = filtered.map(s=>{
+    const c = cLookup[s.country];
+    if(!c) return null;
+    let lat = c.lat, lng = c.lng;
+    if(s.region && REGIONS[s.country]){
+      const r = REGIONS[s.country].find(rr=>rr.n.toLowerCase()===s.region.toLowerCase());
+      if(r){ lat=r.lat; lng=r.lng; }
+    }
+    if(typeof s.lat === 'number' && typeof s.lng === 'number'){ lat=s.lat; lng=s.lng; }
+    return { s, c, lat, lng };
+  }).filter(Boolean);
+
+  // Only jitter entries that land on the exact same coordinates (e.g. shared country/region fallback)
   const groups = {};
-  filtered.forEach(s=>{
-    const key = s.country + '|' + (s.region||'');
-    (groups[key] = groups[key]||[]).push(s);
+  resolved.forEach(r=>{
+    const key = r.lat.toFixed(3) + ',' + r.lng.toFixed(3);
+    (groups[key] = groups[key]||[]).push(r);
   });
 
   Object.values(groups).forEach(group=>{
-    group.forEach((s, idx)=>{
-      const c = cLookup[s.country];
-      if(!c) return;
-      let lat = c.lat, lng = c.lng;
-      if(s.region && REGIONS[s.country]){
-        const r = REGIONS[s.country].find(rr=>rr.n.toLowerCase()===s.region.toLowerCase());
-        if(r){ lat=r.lat; lng=r.lng; }
-      }
-      if(typeof s.lat === 'number' && typeof s.lng === 'number'){ lat=s.lat; lng=s.lng; }
+    group.forEach(({s,c,lat,lng}, idx)=>{
       const [jlat,jlng] = jitter(lat,lng, idx, group.length);
       const marker = L.circleMarker([jlat,jlng], {
         radius:7, color:'#2C4E37', weight:1.5, fillColor:'#3F6B4F', fillOpacity:0.85

@@ -73,88 +73,167 @@ const COUNTRIES = [{"n": "Afghanistan", "c": "AF", "lat": 34.53, "lng": 69.17}, 
 const REGIONS = {"DE": [{"n": "Baden-W\u00fcrttemberg", "lat": 48.66, "lng": 9.35}, {"n": "Bavaria", "lat": 48.79, "lng": 11.5}, {"n": "Berlin", "lat": 52.52, "lng": 13.4}, {"n": "Brandenburg", "lat": 52.41, "lng": 13.06}, {"n": "Bremen", "lat": 53.08, "lng": 8.8}, {"n": "Hamburg", "lat": 53.55, "lng": 9.99}, {"n": "Hesse", "lat": 50.65, "lng": 9.16}, {"n": "Lower Saxony", "lat": 52.64, "lng": 9.85}, {"n": "Mecklenburg-Vorpommern", "lat": 53.61, "lng": 12.43}, {"n": "North Rhine-Westphalia", "lat": 51.43, "lng": 7.66}, {"n": "Rhineland-Palatinate", "lat": 49.91, "lng": 7.45}, {"n": "Saarland", "lat": 49.38, "lng": 7.02}, {"n": "Saxony", "lat": 51.1, "lng": 13.2}, {"n": "Saxony-Anhalt", "lat": 51.95, "lng": 11.69}, {"n": "Schleswig-Holstein", "lat": 54.22, "lng": 9.7}, {"n": "Thuringia", "lat": 50.9, "lng": 11.03}, {"n": "Hessen", "lat": 50.65, "lng": 9.16}], "GB": [{"n": "England", "lat": 52.36, "lng": -1.17}, {"n": "Scotland", "lat": 56.49, "lng": -4.2}, {"n": "Wales", "lat": 52.13, "lng": -3.78}, {"n": "Northern Ireland", "lat": 54.61, "lng": -6.66}], "IE": [{"n": "Leinster", "lat": 53.27, "lng": -7.14}, {"n": "Munster", "lat": 52.3, "lng": -8.6}, {"n": "Connacht", "lat": 53.73, "lng": -9.05}, {"n": "Ulster (ROI)", "lat": 54.3, "lng": -7.6}], "NL": [{"n": "North Holland", "lat": 52.52, "lng": 4.79}, {"n": "South Holland", "lat": 52.02, "lng": 4.48}, {"n": "Zuid-Holland", "lat": 52.02, "lng": 4.48}, {"n": "Utrecht", "lat": 52.09, "lng": 5.12}, {"n": "North Brabant", "lat": 51.56, "lng": 5.24}, {"n": "Gelderland", "lat": 52.05, "lng": 5.87}, {"n": "Overijssel", "lat": 52.44, "lng": 6.5}, {"n": "Limburg", "lat": 51.19, "lng": 5.86}, {"n": "Friesland", "lat": 53.16, "lng": 5.78}, {"n": "Groningen", "lat": 53.22, "lng": 6.57}, {"n": "Drenthe", "lat": 52.86, "lng": 6.62}, {"n": "Flevoland", "lat": 52.53, "lng": 5.6}, {"n": "Zeeland", "lat": 51.49, "lng": 3.85}], "DK": [{"n": "Capital Region", "lat": 55.68, "lng": 12.57}, {"n": "Zealand", "lat": 55.47, "lng": 11.83}, {"n": "Southern Denmark", "lat": 55.36, "lng": 9.66}, {"n": "Central Denmark", "lat": 56.16, "lng": 9.55}, {"n": "North Denmark", "lat": 57.05, "lng": 9.93}], "FR": [{"n": "\u00cele-de-France", "lat": 48.85, "lng": 2.35}, {"n": "Auvergne-Rh\u00f4ne-Alpes", "lat": 45.44, "lng": 4.39}, {"n": "Occitanie", "lat": 43.9, "lng": 3.3}, {"n": "Nouvelle-Aquitaine", "lat": 45.17, "lng": 0.14}, {"n": "Grand Est", "lat": 48.7, "lng": 4.9}, {"n": "Hauts-de-France", "lat": 50.0, "lng": 2.8}, {"n": "Provence-Alpes-C\u00f4te d'Azur", "lat": 43.93, "lng": 6.06}, {"n": "Brittany", "lat": 48.2, "lng": -2.93}, {"n": "Normandy", "lat": 49.18, "lng": -0.37}, {"n": "Pays de la Loire", "lat": 47.47, "lng": -0.75}, {"n": "Centre-Val de Loire", "lat": 47.48, "lng": 1.68}, {"n": "Bourgogne-Franche-Comt\u00e9", "lat": 47.28, "lng": 4.99}, {"n": "Corsica", "lat": 42.15, "lng": 9.1}], "ES": [{"n": "Madrid", "lat": 40.42, "lng": -3.7}, {"n": "Catalonia", "lat": 41.82, "lng": 1.87}, {"n": "Andalusia", "lat": 37.38, "lng": -4.9}, {"n": "Valencia", "lat": 39.47, "lng": -0.38}, {"n": "Galicia", "lat": 42.87, "lng": -8.22}, {"n": "Basque Country", "lat": 43.16, "lng": -2.68}, {"n": "Castile and Le\u00f3n", "lat": 41.65, "lng": -4.73}, {"n": "Canary Islands", "lat": 28.29, "lng": -16.63}], "IT": [{"n": "Lombardy", "lat": 45.62, "lng": 9.62}, {"n": "Lazio", "lat": 41.9, "lng": 12.58}, {"n": "Campania", "lat": 40.84, "lng": 14.3}, {"n": "Sicily", "lat": 37.6, "lng": 14.02}, {"n": "Veneto", "lat": 45.53, "lng": 11.79}, {"n": "Piedmont", "lat": 45.07, "lng": 7.68}, {"n": "Emilia-Romagna", "lat": 44.49, "lng": 10.93}, {"n": "Tuscany", "lat": 43.55, "lng": 11.1}, {"n": "Apulia", "lat": 41.13, "lng": 16.87}], "CH": [{"n": "Zurich", "lat": 47.42, "lng": 8.65}, {"n": "Bern", "lat": 46.92, "lng": 7.45}, {"n": "Vaud", "lat": 46.57, "lng": 6.65}, {"n": "Geneva", "lat": 46.2, "lng": 6.15}, {"n": "Basel-Stadt", "lat": 47.56, "lng": 7.59}, {"n": "Ticino", "lat": 46.17, "lng": 8.8}, {"n": "St. Gallen", "lat": 47.42, "lng": 9.38}], "AT": [{"n": "Vienna", "lat": 48.21, "lng": 16.37}, {"n": "Lower Austria", "lat": 48.3, "lng": 15.75}, {"n": "Upper Austria", "lat": 48.15, "lng": 14.03}, {"n": "Styria", "lat": 47.2, "lng": 15.2}, {"n": "Tyrol", "lat": 47.26, "lng": 11.39}, {"n": "Salzburg", "lat": 47.8, "lng": 13.05}], "SE": [{"n": "Stockholm County", "lat": 59.33, "lng": 18.06}, {"n": "V\u00e4stra G\u00f6taland", "lat": 57.85, "lng": 12.9}, {"n": "Sk\u00e5ne", "lat": 55.99, "lng": 13.3}, {"n": "Uppsala", "lat": 59.86, "lng": 17.64}], "NO": [{"n": "Oslo", "lat": 59.91, "lng": 10.75}, {"n": "Viken", "lat": 60.1, "lng": 11.1}, {"n": "Vestland", "lat": 60.39, "lng": 5.32}, {"n": "Rogaland", "lat": 58.97, "lng": 5.73}], "BE": [{"n": "Flanders", "lat": 51.05, "lng": 4.6}, {"n": "Wallonia", "lat": 50.5, "lng": 5.0}, {"n": "Brussels-Capital", "lat": 50.85, "lng": 4.35}], "US": [{"n": "California", "lat": 36.78, "lng": -119.42}, {"n": "New York", "lat": 42.65, "lng": -73.75}, {"n": "Texas", "lat": 31.97, "lng": -99.9}, {"n": "Massachusetts", "lat": 42.41, "lng": -71.38}, {"n": "Illinois", "lat": 40.63, "lng": -89.4}, {"n": "Washington", "lat": 47.75, "lng": -120.74}, {"n": "Colorado", "lat": 39.55, "lng": -105.78}, {"n": "Pennsylvania", "lat": 41.2, "lng": -77.19}, {"n": "Oregon", "lat": 43.8, "lng": -120.55}, {"n": "North Carolina", "lat": 35.76, "lng": -79.02}, {"n": "Minnesota", "lat": 46.73, "lng": -94.69}, {"n": "Virginia", "lat": 37.43, "lng": -78.66}, {"n": "Florida", "lat": 27.66, "lng": -81.52}, {"n": "Ohio", "lat": 40.42, "lng": -82.91}, {"n": "Georgia", "lat": 32.16, "lng": -82.9}, {"n": "Michigan", "lat": 44.31, "lng": -85.6}, {"n": "Other US state", "lat": 39.0, "lng": -98.0}], "CA": [{"n": "Ontario", "lat": 51.25, "lng": -85.32}, {"n": "Quebec", "lat": 52.94, "lng": -73.55}, {"n": "British Columbia", "lat": 53.73, "lng": -127.65}, {"n": "Alberta", "lat": 53.93, "lng": -116.58}, {"n": "Nova Scotia", "lat": 44.68, "lng": -63.74}, {"n": "Manitoba", "lat": 53.76, "lng": -98.81}], "AU": [{"n": "New South Wales", "lat": -31.84, "lng": 145.61}, {"n": "Victoria", "lat": -37.02, "lng": 144.96}, {"n": "Queensland", "lat": -20.92, "lng": 142.7}, {"n": "Western Australia", "lat": -27.67, "lng": 121.63}, {"n": "South Australia", "lat": -30.0, "lng": 136.21}, {"n": "Australian Capital Territory", "lat": -35.47, "lng": 149.01}, {"n": "Tasmania", "lat": -42.03, "lng": 146.59}], "NZ": [{"n": "Auckland", "lat": -36.85, "lng": 174.76}, {"n": "Wellington", "lat": -41.29, "lng": 174.78}, {"n": "Canterbury", "lat": -43.53, "lng": 172.64}, {"n": "Otago", "lat": -45.31, "lng": 169.73}, {"n": "Waikato", "lat": -37.78, "lng": 175.28}], "IN": [{"n": "Maharashtra", "lat": 19.75, "lng": 75.71}, {"n": "Delhi", "lat": 28.7, "lng": 77.1}, {"n": "Karnataka", "lat": 15.32, "lng": 75.71}, {"n": "Tamil Nadu", "lat": 11.13, "lng": 78.66}, {"n": "Kerala", "lat": 10.85, "lng": 76.27}, {"n": "West Bengal", "lat": 22.99, "lng": 87.86}, {"n": "Gujarat", "lat": 22.26, "lng": 71.19}, {"n": "Rajasthan", "lat": 27.02, "lng": 74.22}], "KE": [{"n": "Nairobi", "lat": -1.29, "lng": 36.82}, {"n": "Mombasa", "lat": -4.04, "lng": 39.66}, {"n": "Kisumu", "lat": -0.09, "lng": 34.77}, {"n": "Nakuru", "lat": -0.3, "lng": 36.08}, {"n": "Nyeri", "lat": -0.42, "lng": 36.95}], "NG": [{"n": "Lagos", "lat": 6.52, "lng": 3.38}, {"n": "Abuja (FCT)", "lat": 9.08, "lng": 7.4}, {"n": "Kano", "lat": 12.0, "lng": 8.52}, {"n": "Rivers", "lat": 4.84, "lng": 6.99}, {"n": "Oyo", "lat": 7.85, "lng": 3.93}], "ZA": [{"n": "Gauteng", "lat": -26.27, "lng": 28.11}, {"n": "Western Cape", "lat": -33.23, "lng": 21.86}, {"n": "KwaZulu-Natal", "lat": -28.53, "lng": 30.9}, {"n": "Eastern Cape", "lat": -32.3, "lng": 26.42}], "BR": [{"n": "S\u00e3o Paulo", "lat": -23.55, "lng": -46.63}, {"n": "Rio de Janeiro", "lat": -22.91, "lng": -43.17}, {"n": "Minas Gerais", "lat": -18.51, "lng": -44.55}, {"n": "Bahia", "lat": -12.97, "lng": -38.51}, {"n": "Federal District", "lat": -15.79, "lng": -47.88}], "CD": [{"n": "Kinshasa", "lat": -4.32, "lng": 15.31}, {"n": "North Kivu", "lat": -1.03, "lng": 29.24}, {"n": "South Kivu", "lat": -2.5, "lng": 28.85}, {"n": "Haut-Katanga", "lat": -11.66, "lng": 27.48}]};
 const SCHOOLS = [
   {
-    "name": "Test School 1",
-    "partner": "Regen Econ",
-    "country": "DE",
-    "region": "Hessen",
-    "detail": "Frankfurt am Main",
-    "lat": 50.1109,
-    "lng": 8.6821,
+    "name": "Carmelcollege Emmen",
+    "country": "NL",
+    "detail": "Emmen",
+    "lat": 52.785,
+    "lng": 6.9,
     "scope": [
-      "Semester"
+      "Individual lessons",
+      "Unit"
     ],
     "level": [
       "Secondary school"
     ],
     "context": [
-      "Woven into an existing Economics course"
+      "Woven into an existing Economics course",
+      "Integrated in newly developed curriculum for bilingual education"
     ],
     "topics": [
-      "Topic 1: Introduction",
-      "Topic 2: Households",
-      "Topic 3: Markets",
-      "Topic 4: Commons"
+      "Topic S: Systems",
+      "Topic 1: Introduction"
     ],
     "language": [
       "English"
     ],
-    "note": "Students love it!"
-  },
-  {
-    "name": "Carmelcollege Emmen",
-    "country": "NL",
-    "region": "Drenthe",
-    "detail": "Emmen",
-    "lat": 52.785,
-    "lng": 6.9,
-    "scope": ["Individual lessons", "Unit"],
-    "level": ["Secondary school"],
-    "context": ["Woven into an existing Economics course", "Integrated in newly developed curriculum for bilingual education"],
-    "topics": ["Topic S: Systems", "Topic 1: Introduction"],
-    "language": ["English"],
     "note": "I use the materials as an addition to the programme for students who would benefit from more challenge or who are interested in learning more."
   },
   {
     "name": "NHL Stenden University of Applied Sciences",
     "country": "NL",
-    "region": "Groningen",
     "detail": "Groningen",
     "lat": 53.2194,
     "lng": 6.5665,
-    "scope": ["Individual lessons"],
-    "level": ["Master's degree", "Teacher training programme"],
-    "context": ["Woven into an existing Economics course", "Woven into an existing teacher training course"],
-    "topics": ["Topic S: Systems", "Topic 1: Introduction"],
-    "language": ["Dutch"],
+    "scope": [
+      "Individual lessons"
+    ],
+    "level": [
+      "Master's degree",
+      "Teacher training programme"
+    ],
+    "context": [
+      "Woven into an existing Economics course",
+      "Woven into an existing teacher training course"
+    ],
+    "topics": [
+      "Topic S: Systems",
+      "Topic 1: Introduction"
+    ],
+    "language": [
+      "Dutch"
+    ],
     "note": "I use the embedded economy model in the microeconomics course as a counterpoint to the traditional neoclassical approach."
   },
   {
     "name": "International School of the Hague",
     "country": "NL",
-    "region": "Zuid-Holland",
     "detail": "Den Haag",
     "lat": 52.0705,
     "lng": 4.3007,
-    "scope": ["Two years"],
-    "level": ["Secondary school"],
-    "context": ["Regenerative Economics course"],
-    "topics": ["Topic S: Systems", "Topic 1: Introduction", "Topic 2: Households", "Topic 3: Markets", "Topic 4: Commons", "Topic 5: The state", "Topic 6: Money and finance", "Topic 7: Global exchanges"],
-    "language": ["English"],
+    "scope": [
+      "Two years"
+    ],
+    "level": [
+      "Secondary school"
+    ],
+    "context": [
+      "Regenerative Economics course"
+    ],
+    "topics": [
+      "Topic S: Systems",
+      "Topic 1: Introduction",
+      "Topic 2: Households",
+      "Topic 3: Markets",
+      "Topic 4: Commons",
+      "Topic 5: The state",
+      "Topic 6: Money and finance",
+      "Topic 7: Global exchanges"
+    ],
+    "language": [
+      "English"
+    ],
     "note": "ISH is running a two year pilot of Regenerative Economics with IB MYP 4/5 (ages 14-16)."
   },
   {
     "name": "Regenerative Economy Lab",
     "country": "AT",
-    "region": "Vienna",
     "detail": "Vienna",
     "lat": 48.2082,
     "lng": 16.3738,
-    "scope": ["Seven-week cohort"],
-    "level": ["Other adult education"],
-    "context": ["Regenerative Economics course"],
-    "topics": ["Topic S: Systems", "Topic 1: Introduction", "Topic 2: Households", "Topic 3: Markets", "Topic 4: Commons", "Topic 5: The state", "Topic 6: Money and finance", "Topic 7: Global exchanges"],
-    "language": ["English"],
+    "scope": [
+      "Seven-week cohort"
+    ],
+    "level": [
+      "Other adult education"
+    ],
+    "context": [
+      "Regenerative Economics course"
+    ],
+    "topics": [
+      "Topic S: Systems",
+      "Topic 1: Introduction",
+      "Topic 2: Households",
+      "Topic 3: Markets",
+      "Topic 4: Commons",
+      "Topic 5: The state",
+      "Topic 6: Money and finance",
+      "Topic 7: Global exchanges"
+    ],
+    "language": [
+      "English"
+    ],
     "note": "Used as a supplementary resource in the Ready to Act programme, a seven-week online course blending written classes, live labs, practitioner talks and a personal action-plan project. It is an excellent resource providing a very strong foundation on regenerative and heterodox economic approaches, full of useful real world examples, references and exercises."
+  },
+  {
+    "name": "The Educators' Lab",
+    "country": "CH",
+    "detail": "Geneva",
+    "lat": 46.2044,
+    "lng": 6.1432,
+    "scope": [
+      "Unstructured or ongoing"
+    ],
+    "level": [
+      "Teacher training programme"
+    ],
+    "context": [],
+    "topics": [
+      "Topic S: Systems",
+      "Topic 1: Introduction",
+      "Topic 2: Households",
+      "Topic 3: Markets",
+      "Topic 5: The state",
+      "Topic 6: Money and finance"
+    ],
+    "language": [
+      "English"
+    ],
+    "note": "We share the materials with organisations and teachers who embed them in their own programmes."
+  },
+  {
+    "name": "The Earth Foundation",
+    "country": "CH",
+    "detail": "Geneva",
+    "lat": 46.2044,
+    "lng": 6.1432,
+    "scope": [
+      "Unstructured or ongoing"
+    ],
+    "level": [
+      "Secondary school"
+    ],
+    "context": [
+      "Extracurricular programme",
+      "Student project or service work"
+    ],
+    "topics": [
+      "Topic 1: Introduction",
+      "Topic 3: Markets"
+    ],
+    "language": [
+      "English"
+    ],
+    "note": "Action Academy virtual student challenge."
   }
 ];
 
